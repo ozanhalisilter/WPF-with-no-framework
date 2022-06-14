@@ -57,10 +57,6 @@ namespace WPF_with_no_framework.Model
             }
         }
 
-
-
-
-
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)
         {

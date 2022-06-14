@@ -21,6 +21,8 @@ namespace WPF_with_no_framework.ViewModel
 
         public UserViewModel()
         {
+            this.AddCommand = new AddCommand(this);
+            
             PeopleList = new ObservableCollection<Person> //add delete eklenecek
             //add basinca yeni ekranda formdan veriyi al
             {
@@ -34,17 +36,29 @@ namespace WPF_with_no_framework.ViewModel
             //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(UserGrid.ItemsSource);
             //view.SortDescriptions.Add(new SortDescription("Age", ListSortDirection.Ascending));
 
-            
-            
-        }
 
+
+        }
+        public AddCommand AddCommand { get; set; }
+        public void AddMethod()
+        {
+
+            PoppupView window = new PoppupView();
+            UserViewModel VM = new UserViewModel();
+            window.DataContext = VM;
+            window.Show();
+            System.Windows.MessageBox.Show("Test");
+        }
         public ObservableCollection<Person> PeopleList
         {
             get { return _PeopleList; }
-            set { _PeopleList = value;
+            set
+            {
+                _PeopleList = value;
                 OnPropertyChanged("PeopleList");
             }
         }
+
 
 
         private ICommand mUpdater;
@@ -54,7 +68,7 @@ namespace WPF_with_no_framework.ViewModel
             {
                 if (mUpdater == null)
                 {
-                    mUpdater = new Updater(); ;
+                    mUpdater = new Commands(); ;
                 }
                 return mUpdater;
             }
@@ -64,6 +78,20 @@ namespace WPF_with_no_framework.ViewModel
             }
         }
 
+
+        //private ICommand _commandOpenSettings;
+
+        //public ICommand CmdOpenSetting
+        //{
+        //    get
+        //    {
+        //        if (_commandOpenSettings == null)
+        //        {
+        //            _commandOpenSettings = new AddCommand();
+        //        }
+        //        return _commandOpenSettings;
+        //    }
+        //}
 
 
     }

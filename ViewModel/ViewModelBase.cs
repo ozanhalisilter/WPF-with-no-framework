@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using static WPF_with_no_framework.ViewModel.UserViewModel;
 
 namespace WPF_with_no_framework.ViewModel
 {
@@ -13,5 +14,7 @@ namespace WPF_with_no_framework.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+   
     }
 }
