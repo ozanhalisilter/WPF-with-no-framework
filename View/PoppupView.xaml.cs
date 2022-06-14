@@ -23,5 +23,7 @@ namespace WPF_with_no_framework.View
         {
             InitializeComponent();
         }
+
+
     }
 }

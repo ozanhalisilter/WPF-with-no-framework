@@ -15,23 +15,23 @@ namespace WPF_with_no_framework.ViewModel
         public void Execute(object param) { }
     }
 
-    public class AddCommand : ICommand
+    //public class AddCommand : ICommand
 
-    {
-        public UserViewModel ViewModel { get; set; }
-        public AddCommand(UserViewModel viewModel)
-        {
-            this.ViewModel = viewModel;
-        }
-        public bool CanExecute(object param) { return true; } // IF the return val is 1 it executes rest 
+    //{
+    //    public UserViewModel ViewModel { get; set; }
+    //    public AddCommand(UserViewModel viewModel)
+    //    {
+    //        this.ViewModel = viewModel;
+    //    }
+    //    public bool CanExecute(object param) { return true; } // IF the return val is 1 it executes rest 
 
-        public event EventHandler CanExecuteChanged;
-        public void Execute(object param)
-        {
+    //    public event EventHandler CanExecuteChanged;
+    //    public void Execute(object param)
+    //    {
 
-            this.ViewModel.AddMethod();
-        }
-    }
+    //        this.ViewModel.AddMethod();
+        
+    
     //public class ButtonCommand : ICommand
 
     //{
