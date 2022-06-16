@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_MVVM_DevExpress.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"  MinHeight="300" MinWidth="400" Height="500" Width="400">
         <Grid Margin="0,0,0,20">
 
             <Grid.RowDefinitions>
@@ -22,16 +22,15 @@
 
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="190"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <Button Command="{Binding Add}" Content="Add New" Grid.Row="1" Grid.Column="4" Width="100"/>
-        <Button Command="{Binding PopUp}" Content="Add Popup" Grid.Row="2" Grid.Column="4" Width="100"/>
-        <Button Command="{Binding Path=UpdateCommand}" Content="Update Selected" Grid.Row="3" Grid.Column="4" Width="100"/>
+        <Button Command="{Binding Add}" Height="23" Content="Add Random User" Grid.Row="1" Grid.Column="4" />
+        <Button Command="{Binding PopUp}" Height="23" Content="Add User" Grid.Row="2" Grid.Column="4" />
+        <Button Command="{Binding Path=UpdateCommand}" Height="23" Content="Update Selected" Grid.Row="3" Grid.Column="4" />
 
 
         <!--<ItemsControl ItemsSource="{Binding PeopleList}" Grid.Row="3">
@@ -46,13 +45,13 @@
         <TextBox Grid.Row="2" Grid.Column="2" Height="23" HorizontalAlignment="Left" Name="txtFirstName" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=UserGrid,Path=SelectedItem.FirstName}" />
         <TextBox Grid.Row="3" Grid.Column="2"  Height="23" HorizontalAlignment="Left"  Name="txtLastName" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=UserGrid,Path=SelectedItem.LastName}" />
         <TextBox Grid.Row="4" Grid.Column="2"  Height="23" HorizontalAlignment="Left"  Name="txtAge" VerticalAlignment="Top" Width="178" Text="{Binding ElementName=UserGrid,Path=SelectedItem.Age}" />
-        <TextBlock Text="UserId" Grid.Row="1"   Grid.Column="1" HorizontalAlignment="Left"  Name="label1" />
+        <TextBlock Text="UserId" Grid.Row="1"   Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label1" />
         <TextBlock Text="Last Name" Grid.Row="2" Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label2" VerticalAlignment="Top" />
         <TextBlock Text="First Name" Grid.Row="3" Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label4" VerticalAlignment="Top" />
         <TextBlock Text="Age" Grid.Row="4" Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label3" VerticalAlignment="Top" />
-                                               
 
-        <ListView x:Name="UserGrid" Grid.Row="6" Grid.Column="1" Grid.RowSpan="3" ItemsSource="{Binding PeopleList}" >
+
+        <ListView x:Name="UserGrid" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="3" ItemsSource="{Binding PeopleList}" MaxHeight="300" >
             <ListView.View>
                 <GridView x:Name="grdTest">
                     <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding Id}"  Width="50"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_MVVM_DevExpress.View"
         mc:Ignorable="d"
-        Title="PopUpView" Height="450" Width="800">
+        Title="PopUpView" Height="500" Width="600">
 
 
 
@@ -25,23 +25,13 @@
 
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="80"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <Button Command="{Binding Add}" Content="Add" Grid.Row="1" Grid.Column="4" Width="100"/>
-
-
-        <!--<ItemsControl ItemsSource="{Binding PeopleList}" Grid.Row="3">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock Text="{Binding FirstName}" Grid.Row="3"/>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>-->
 
         <TextBox Grid.Row="1" Grid.Column="2" Height="23" HorizontalAlignment="Left"  x:Name="popUserId" VerticalAlignment="Top" Width="178" Text="{Binding Person.Id, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         <TextBox Grid.Row="2" Grid.Column="2" Height="23" HorizontalAlignment="Left"  x:Name="popFirstName" VerticalAlignment="Top" Width="178" Text="{Binding Path=Person.FirstName , Mode=TwoWay , UpdateSourceTrigger=PropertyChanged }" />
@@ -49,14 +39,14 @@
         <TextBox Grid.Row="4" Grid.Column="2"  Height="23" HorizontalAlignment="Left"   x:Name="popAge" VerticalAlignment="Top" Width="178" Text="{Binding Path=Person.Age,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }" />
 
         <TextBlock Text="UserId" Grid.Row="1"   Grid.Column="1" HorizontalAlignment="Left"  Name="label1" />
-        <TextBlock Text="Last Name" Grid.Row="2" Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label2" VerticalAlignment="Top" />
-        <TextBlock Text="First Name" Grid.Row="3" Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label4" VerticalAlignment="Top" />
+        <TextBlock Text="First Name" Grid.Row="2" Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label2" VerticalAlignment="Top" />
+        <TextBlock Text="Last Name" Grid.Row="3" Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label4" VerticalAlignment="Top" />
         <TextBlock Text="Age" Grid.Row="4" Grid.Column="1" Height="28" HorizontalAlignment="Left"  Name="label3" VerticalAlignment="Top" />
 
 
-        <Button Command="{Binding Add}" Content="Add New" Grid.Row="2" Grid.Column="4" Width="100"/>
+        <!--<Button Command="{Binding Add}" Content="Add Random User" Grid.Row="2" Grid.Column="4" Width="100"/>-->
 
-        <Button  x:Name="AddUser" Command="{Binding AddForm}" Content="AddUser" Grid.Row="1" Grid.Column="4" Width="100"/>
+        <Button  x:Name="AddUser" Command="{Binding AddForm}" Content="Add User" Grid.Row="1" Grid.Column="4" Width="100"/>
 
     </Grid>
 </Window>
