@@ -12,18 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace WPF_with_no_framework.View
+namespace WPF_MVVM_DevExpress.View
 {
     /// <summary>
-    /// Interaction logic for PoppupView.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class PoppupView : Window
+    public partial class MainWindow : Window
     {
-        public PoppupView()
+        public MainWindow()
         {
             InitializeComponent();
         }
-
-
     }
 }

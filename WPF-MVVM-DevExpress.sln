@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-with-no-framework", "WPF-with-no-framework.csproj", "{90FD1658-546F-4651-97B8-C8479CE783F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF-MVVM-DevExpress", "WPF-MVVM-DevExpress.csproj", "{867C2C58-F222-4636-8801-D22D7A7DA558}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90FD1658-546F-4651-97B8-C8479CE783F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90FD1658-546F-4651-97B8-C8479CE783F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90FD1658-546F-4651-97B8-C8479CE783F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90FD1658-546F-4651-97B8-C8479CE783F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867C2C58-F222-4636-8801-D22D7A7DA558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867C2C58-F222-4636-8801-D22D7A7DA558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867C2C58-F222-4636-8801-D22D7A7DA558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867C2C58-F222-4636-8801-D22D7A7DA558}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {624713AE-4E73-484A-9236-F8F8FACE10E5}
+		SolutionGuid = {DA4AB45D-22C0-471D-8B60-AF3C0B47A6AD}
 	EndGlobalSection
 EndGlobal

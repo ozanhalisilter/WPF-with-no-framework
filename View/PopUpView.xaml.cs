@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_with_no_framework.View;
 
-namespace WPF_with_no_framework
+namespace WPF_MVVM_DevExpress.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PopUpView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PopUpView : Window
     {
-        public MainWindow()
+        public PopUpView()
         {
             InitializeComponent();
-        }
-
-        public static implicit operator MainWindow(MainPage v)
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WPF_with_no_framework.Properties
+namespace WPF_MVVM_DevExpress.Properties
 {
 
 
