@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-
+using DevExpress.Mvvm;
 namespace WPF_MVVM_DevExpress.ViewModel
 {
 
@@ -15,19 +15,25 @@ namespace WPF_MVVM_DevExpress.ViewModel
     public class PopUpViewModel : MainWindowViewModel
     {
         public ICommand AddForm { get; set; }
-
+        
         public Person person;
 
+        void OnMessage(ObservableCollection<Person> peopleList)
+        {
+            PeopleList = peopleList;
+        }
         public Person Person
         {
             get { return person; }
             set { person = value; OnPropertyChanged("Person"); }
         }
-        public PopUpViewModel(ObservableCollection<Person> peopleList)
+        public PopUpViewModel() //
         {
-            PeopleList = peopleList;
+            
             Person = new Person();
             AddForm = new RelayCommand(AddUser);
+            Messenger.Default.Register<ObservableCollection<Person>>(this, OnMessage);
+
 
         }
 
@@ -68,8 +74,11 @@ namespace WPF_MVVM_DevExpress.ViewModel
                 if (IsInPeopleList(Person.Id))
                 {
                     Person.Id = FindNextId(PeopleList.Count);
-
+                    
                 }
+
+                //Messenger.Default.Send<Person>(Person);
+                //MessageBox.Show("Message Sent");
                 PeopleList.Add(Person);
                 Person = new Person();
             }

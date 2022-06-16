@@ -7,16 +7,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using WPF_MVVM_DevExpress.View;
+using DevExpress.Mvvm;
 
 namespace WPF_MVVM_DevExpress.ViewModel
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        
         public ICommand Add { get; set; }
         public ICommand PopUp { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
 
         private ObservableCollection<Person> theCol;
+
+       
+            
 
 
 
@@ -34,14 +39,14 @@ namespace WPF_MVVM_DevExpress.ViewModel
             PopUp = new RelayCommand(OpenPopUpMethod);
 
 
-
         }
 
 
+        
 
 
 
-        private void AddCommand(object obj)
+            private void AddCommand(object obj)
         {
             this.PeopleList.Add(new Person { Id = PeopleList.Count + 1, FirstName = "Test", LastName = "LastName", Age = (PeopleList.Count * 17) % 30 });
         }
@@ -49,8 +54,10 @@ namespace WPF_MVVM_DevExpress.ViewModel
         private void OpenPopUpMethod(object obj)
         {
             View.PopUpView window = new View.PopUpView();
-            window.DataContext = new PopUpViewModel(PeopleList);
+            window.DataContext = new PopUpViewModel();//PeopleList
             window.Show();
+            Messenger.Default.Send(PeopleList);
+            
         }
 
         public void OnPropertyChanged(string propertyName)
